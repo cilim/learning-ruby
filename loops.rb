@@ -17,6 +17,8 @@
 1.step(5, 1) {|i| puts i}
 
 #When having multiple lines of code in the loop use do and end instead of { and } so instead of this
+#Why? Because Ruby is known not only to be one of the most OO languages, but also because Ruby tends to feel
+#English like. You read the code and you immediately understand most of it (should)
 
 1.upto(5) {
 	|i|
