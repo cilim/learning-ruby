@@ -3,6 +3,9 @@ class Pet
 end
 
 class Dog < Pet
+	def bark
+		return "Woof!"
+	end
 end
 
 class Cat < Pet
@@ -19,6 +22,6 @@ snake.length = 15
 dog = Dog.new
 dog.name = "Balto"
 puts "Snake: " + snake.name + " " + snake.length.to_s
-puts "Dog: " + dog.name
+puts "Dog: " + dog.name + " says " + dog.bark
 #everything works till here
 dog.length = 15
