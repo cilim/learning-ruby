@@ -42,3 +42,17 @@ p c
 d = ["a", "b", "c"]
 e = c + d
 p e
+
+#Checking if array empty or if it contains some element
+
+alpha = []
+#Is empty method
+puts "Array is empty" if alpha.empty?
+
+alpha << 1
+alpha << 3
+alpha << 4
+alpha << 5
+#Contains method == include?("element")
+p alpha.include?("x")
+p alpha.include?(1)
