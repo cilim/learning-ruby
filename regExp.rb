@@ -66,3 +66,25 @@ puts "Ranges in numbers are also possible"
 puts "1,2,3,4,5,6,7,8,9".scan(/[3-7],/) do |x|
 	puts x
 end
+
+puts "Now we start using the more important part about regular expressions. A lot of times theres going to be a field in which a user will have to enter some data. Some of those datafields will have to have a specific pattern. If they dont get validated, there is a possibility of not persisting that information in the database"
+
+# a new operator =~
+
+puts "String has vowels" if "This is a test" =~ /[aeiou]/
+
+puts "String has no vowels" unless "This is a test" =~ /[aeiou]/
+
+#There is also a method called match which is more powerfull
+
+x = "This is a test".match(/(\w+) (\w+)/)
+puts x.to_s + " \nThe same as: " + x[0]
+puts "but, you can call parts of the array: " + x[1]
+puts x[2]
+puts x[3].to_s + " - empty"
+puts x[4].to_s + " - empty"
+
+y= "So if the string has more words like this".match(/(\w+) (\w+) (\w+) (\w+) (\w+) (\w+) (\w+) (\w+) (\w+)/)
+0.upto(y.length) do |i|
+	puts i.to_s + ": " + y[i].to_s if y[i] != nil
+end
