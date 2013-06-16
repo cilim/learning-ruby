@@ -62,3 +62,22 @@ a = 5
 
 b = double_it.call(5)
 puts b
+
+#Ranges!
+#in ruby its possible to set ranges, for example, in an array and do stuff with them
+
+array = [1,2,3,4,5,6,7,8,9]
+
+p array[1..6]
+
+array[1..3] = ["a", "b", "c"]
+
+p array
+
+
+#so you can improve the standard include? method
+puts array.include?("a")
+
+#like this, if you need only to check a range in an array
+
+puts array[3..6].include?("a")
