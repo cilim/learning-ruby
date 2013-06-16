@@ -46,4 +46,23 @@ end
 #*? same but matches as few as possible
 #+? same but matches as few as possible
 #? match either one or none of the preceding character
-"THe car costs $1000 and the cat costs $20".scan(/\D+/) {|x| puts x}
+
+
+#You can do character classes with regular expressions as well
+#For example, match all vowels that are lower cased in a string
+
+"All vowels from this string are going to be output".scan(/[aeiou]/) {|x| puts x}
+
+#You can also select ranges
+
+puts "Ranges"
+
+"From this string only letter from d-k are going to be displayed".scan(/[d-k]/) do |x|
+	puts x
+end
+
+puts "Ranges in numbers are also possible"
+
+puts "1,2,3,4,5,6,7,8,9".scan(/[3-7],/) do |x|
+	puts x
+end
