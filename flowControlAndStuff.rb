@@ -81,3 +81,12 @@ puts array.include?("a")
 #like this, if you need only to check a range in an array
 
 puts array[3..6].include?("a")
+
+#Symbols are better than strings if you don't need the values stored or if the values only serve as an option
+
+situation = :good
+
+puts "Everything is ok" if situation == :good
+puts "PANIC!" if situation == :bad
+
+#They take less memory and are easier to read. A lot of rubyists use it, so you try it also ;)
