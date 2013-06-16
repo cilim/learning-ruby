@@ -56,3 +56,25 @@ alpha << 5
 #Contains method == include?("element")
 p alpha.include?("x")
 p alpha.include?(1)
+
+
+#First and last element of array
+
+bigArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+puts bigArray.join(", ")
+puts "First element: " + bigArray.first.to_s
+puts "Last element: " + bigArray.last.to_s
+
+#There is also selecting only a range of elements with first/last method
+
+puts "First 5 elements: " + bigArray.first(5).join(", ").to_s
+puts "Last 5 elements: " + bigArray.last(5).join(", ").to_s
+
+#it could also be done like this
+#0.upto(4) {|x| print bigArray[x].to_s + ", "}
+
+#but the Ruby method is much better
+
+#You can also reverse the order of elements
+
+puts "Reversed: " + bigArray.reverse.join(", ")
