@@ -36,3 +36,14 @@ end
 #\W anything that \w doesnt match
 #\d any digit, \D anything that \d doesnt match
 #\s whitespace and \S non-whitespace
+
+#so, if you want to extract digits from a string then you use \d, but if you want to match as many digits in a row together then you have to add +
+
+"THe car costs $1000 and the cat costs $20".scan(/\d+/) {|x| puts x}
+
+#So, + matches more occurences of the given character
+#* Matches zero or more
+#*? same but matches as few as possible
+#+? same but matches as few as possible
+#? match either one or none of the preceding character
+"THe car costs $1000 and the cat costs $20".scan(/\D+/) {|x| puts x}
