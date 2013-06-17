@@ -6,6 +6,12 @@ x = []
 
 y = [1, 2, 3, 4]
 
+#Ruby has a shortcut in building arrays like this
+
+coolArray = %w{this is also an array containing words. Each word has its own index}
+
+p coolArray
+
 x << "a"
 x << "b"
 x.push("c")
