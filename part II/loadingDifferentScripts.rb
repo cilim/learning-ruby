@@ -1,6 +1,11 @@
 #Nice method of loading (requiring) different scripts is:
 
-call = "a.rb"
-call = "b.rb" #this is going to get called
+callA = './a'
+callB = './b'
 
-load call == "a.rb"  ? "a.rb" : "b.rb"
+call = callA
+
+require call == callA  ? callA : callB
+
+#the working directory is no longer in the Ruby path in Ruby 1.9.2.
+#Thats the reason why require 'a' didnt work. You have to add './' before the name of the script you want to call

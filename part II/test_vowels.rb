@@ -8,11 +8,15 @@ puts "This is a test".vowels.join('-')
 #IMPORTANT: when including a file load always processes the code upon including it. require doesnt do that
 
 #for example
-#a.rb outputs Hello
-#you are in b.rb which outputs World
-#load a.rb
-#puts "World"
-#load a.rb
-#output: hello world hello
+puts "Example for loading scripts"
+load 'a.rb' #the content of a.rb gets written here
+puts "World"
+load 'a.rb' #the content of a.rb gets written here
 
 #if you used require, hello would be output only the first time
+
+#example with b
+puts "Example for requiring scripts"
+puts "Hello"
+require './b'
+require './b' #the content of b.rb gets written only once
