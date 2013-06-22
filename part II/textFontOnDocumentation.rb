@@ -26,3 +26,12 @@
 #
  end
 # end
+
+# This section is documented and read by RDoc. And now it will be shown how to tell rdoc not to document some parts
+#--
+# This section is hidden from RDoc and could contain developer
+# notes, private messages between developers, etc.
+#++
+# RDoc begins processing again here after the ++.
+#end
+
