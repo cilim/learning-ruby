@@ -22,4 +22,17 @@ class Animal
 	end
 end
 
-animal = Animal.new("")
+begin
+	puts 10/0
+	animal = Animal.new("")
+	person = Person.new("Marko")
+	puts person.name
+	person2 = Person.new("")
+	puts person2.name
+rescue ZeroDivisionError
+	puts "You cant divide anything by zero."
+rescue BadDataException
+	puts "There is no provided name"
+rescue ArgumentError
+	puts "No name provided"
+end
