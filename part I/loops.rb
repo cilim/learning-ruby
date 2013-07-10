@@ -31,3 +31,12 @@
 	|i|
 	puts "Number " + i.to_s + " is even" if i%2 == 0
 end
+
+#do-while in Ruby
+
+response = 'n'
+begin
+	puts "You're in the program"
+	response = gets
+	puts response
+end while gets == 'y'
